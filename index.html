@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Shadow Generator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Fira+Code:wght@400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Gerador de Box Shadow</h1>
+        
+        <div class="controls">
+            <div class="controlGroup">
+                <label>Deslocamento Horizontal</label>
+                <input type="range" id="deslocamentoHorizontal" min="-100" max="100" value="0">
+            </div>
+
+            <div class="controlGroup">
+                <label>Deslocamento Vertical</label>
+                <input type="range" id="deslocamentoVertical" min="-100" max="100" value="0">
+            </div>
+
+            <div class="controlGroup">
+                <label>Blur</label>
+                <input type="range" id="raioBlur" min="0" max="100" value="24">
+            </div>
+
+            <div class="controlGroup">
+                <label>Tamanho</label>
+                <input type="range" id="raioEspalhamento" min="-50" max="50" value="0">
+            </div>
+
+            <div class="controlGroupRow">
+                <div class="controlGroup">
+                    <label>Cor</label>
+                    <input type="color" id="corSombra" value="#000000">
+                </div>
+
+                <div class="controlGroup">
+                    <div class="checkboxGroup">
+                        <input type="checkbox" id="sombraInterna">
+                        <label for="sombraInterna">Inner shadow</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="controlGroup">
+                <label>Opacidade</label>
+                <input type="range" id="opacidadeSombra" min="0" max="100" value="50">
+            </div>
+
+            <div class="controlGroupRow">
+                <div class="controlGroup">
+                    <label>Cor de Fundo</label>
+                    <input type="color" id="corFundo" value="#f5f5f5">
+                </div>
+
+                <div class="controlGroup">
+                    <label>Cor da Div</label>
+                    <input type="color" id="corCaixa" value="#f5f5f5">
+                </div>
+            </div>
+        </div>
+
+        <div class="previewSection">
+            <div class="previewBox">
+                <div class="box"></div>
+            </div>
+
+            <div class="codeOutput">
+                <div class="codeHeader">
+                    <span class="codeLabel">css</span>
+                    <button class="copyButton">Copiar código</button>
+                </div>
+                <div class="codeContent">
+                    <span class="codeProperty">box-shadow:</span> <span class="codeValue">5px 5px 10px #000;</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
